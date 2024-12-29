@@ -1105,6 +1105,30 @@ input {
 	opacity: 1;
 }
 
+#background-music {
+	display: none; /* Oculta el reproductor de audio nativo */
+}
+
+.music-player-button {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	width: 3rem;
+	height: 3rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+.music-player-button img {
+	width: 2rem;
+	height: 2rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 	.hero-content {

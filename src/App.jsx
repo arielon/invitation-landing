@@ -12,6 +12,7 @@ import LocationsSection from "./components/LocationsSection";
 import RSVPSection from "./components/RSVPSection";
 import BackToTop from "./components/BackToTop";
 import "./App.css";
+import MusicPlayer from "./components/MusicPlayer";
 
 function App() {
 	// Temporary hardcoded data for development
@@ -35,6 +36,7 @@ function App() {
 			<LocationsSection />
 			<RSVPSection />
 			<BackToTop />
+			<MusicPlayer />
 		</div>
 	);
 }
