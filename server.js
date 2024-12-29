@@ -1,10 +1,10 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import nodemailer from "nodemailer";
 
 const app = express();
-const port = process.env.PORT || 5000; // Para el puerto dinámico en el servidor
+const port = process.env.PORT || 5001; // Para el puerto dinámico en el servidor
 
 app.use(cors());
 app.use(bodyParser.json());
