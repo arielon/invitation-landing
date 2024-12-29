@@ -18,7 +18,7 @@ body {
 /* Hero Section */
 .hero-section {
 	height: 100vh;
-	background: url("src/assets/hero.jpg") no-repeat center center/cover;
+	background: url("/images/hero.jpg") no-repeat center center/cover;
 	color: var(--White);
 	display: flex;
 	flex-direction: column;
@@ -485,10 +485,11 @@ p {
 }
 
 /* Countdown Section */
+
 .countdown-section {
 	position: relative;
 	background: linear-gradient(0deg, rgba(14, 32, 37, 0.32) 0%, rgba(14, 32, 37, 0.32) 100%),
-		url("src/assets/countdown-bg.jpg") lightgray 50% / cover no-repeat;
+		url("/images/countdown-bg.jpg") lightgray 50% / cover no-repeat;
 	text-align: center;
 	color: var(--White, #ede9e3);
 	padding: 2rem 0rem;

@@ -1,7 +1,7 @@
 const HeroSection = () => (
 	<header className="hero-section">
 		<div className="hero-overlay"></div>
-		<img src="src/assets/hero-leaf.svg" alt="Hero Leaf" className="hero-top-svg" />
+		<img src="/images/svg/hero-leaf.svg" alt="Hero Leaf" className="hero-top-svg" />
 		<div className="hero-content">
 			<nav className="hero-navigation">
 				<ul className="hero-left-nav">
