@@ -16,7 +16,7 @@ const RSVPSection = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch("http://localhost:5000/send", {
+			const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/send`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
