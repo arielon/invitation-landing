@@ -28,7 +28,7 @@ const CountdownSection = () => {
 	return (
 		<section id="countdown" className="countdown-section">
 			<div className="countdown-content">
-				<img src="src/assets/countdown-deco1.svg" alt="Countdown Decoration" className="countdown-svg" />
+				<img src="/images/svg/countdown-deco1.svg" alt="Countdown Decoration" className="countdown-svg" />
 				<p className="countdown-title">¡La cuenta regresiva ha comenzado!</p>
 				<h3>5 de Abril del 2025</h3>
 				<div className="countdown-timer">
@@ -57,7 +57,7 @@ const CountdownSection = () => {
 						<a href="#calendar">Añadir a Calendario</a>
 					</button>
 				</div>
-				<img src="src/assets/countdown-deco2.svg" alt="Countdown Decoration" className="countdown-svg" />
+				<img src="/images/svg/countdown-deco2.svg" alt="Countdown Decoration" className="countdown-svg" />
 			</div>
 		</section>
 	);

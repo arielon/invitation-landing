@@ -3,12 +3,12 @@ import React from "react";
 const GiftSection = () => (
 	<section id="gifts" className="gift-section">
 		<div className="gift-svg-top">
-			<img src="src/assets/gift-icon.svg" alt="Gift Icon" />
+			<img src="/images/svg/gift-icon.svg" alt="Gift Icon" />
 		</div>
 		<div className="gift-title">
-			<img className="gift-left-svg" src="src/assets/left-decor.svg" alt="Left Decor" />
+			<img className="gift-left-svg" src="/images/svg/left-decor.svg" alt="Left Decor" />
 			<h2>Mesa de Regalos</h2>
-			<img className="gift-right-svg" src="src/assets/right-decor.svg" alt="Right Decor" />
+			<img className="gift-right-svg" src="/images/svg/right-decor.svg" alt="Right Decor" />
 		</div>
 		<p className="gift-description">
 			Si deseas ayudarnos a iniciar nuestra vida juntos, hemos preparado una mesa de regalos en Liverpool con artículos

@@ -3,11 +3,11 @@ import React from "react";
 const InvitationSection = ({ guestData }) => (
 	<section id="invitation" className="invitation-section">
 		<div className="head-invitation">
-			<img className="invitation-top-left-svg" width="7rem" src="src/assets/invitado-left.svg" />
-			<img className="invitation-top-right-svg" width="7rem" src="src/assets/invitado-right.svg" />
+			<img className="invitation-top-left-svg" width="7rem" src="/images/svg/invitado-left.svg" />
+			<img className="invitation-top-right-svg" width="7rem" src="/images/svg/invitado-right.svg" />
 		</div>
 		<div className="invitation-content">
-			<img className="invitation-top-leaf" height="1.5rem" src="src/assets/hoja1.svg" />
+			<img className="invitation-top-leaf" height="1.5rem" src="/images/svg/hoja1.svg" />
 			<span className="subtitle">¡{guestData.name}, te invitamos a nuestra boda!</span>
 			<p className="special-text">
 				Nos emociona compartir contigo este día tan especial. Te invitamos a acompañarnos en nuestra boda el 5 de Abril
@@ -27,7 +27,7 @@ const InvitationSection = ({ guestData }) => (
 					<a href="#rsvp">Confirmar asistencia</a>
 				</button>
 			</div>
-			<img className="invitation-bottom-leaf" height="1.5rem" src="src/assets/hoja2.svg" />
+			<img className="invitation-bottom-leaf" height="1.5rem" src="/images/svg/hoja2.svg" />
 		</div>
 	</section>
 );

@@ -53,7 +53,7 @@ const RSVPSection = () => {
 			<div className="rsvp-body">
 				<div className="rsvp-content">
 					<div className="rsvp-left">
-						<img src="src/assets/rsvp-image.jpg" alt="Imagen RSVP" className="rsvp-image" />
+						<img src="/images/rsvp-image.jpg" alt="Imagen RSVP" className="rsvp-image" />
 					</div>
 					<div className="rsvp-right">
 						<h3>Confirma aquí:</h3>
@@ -127,7 +127,7 @@ const RSVPSection = () => {
 					<h3>También puedes confirmar por:</h3>
 					<div className="rsvp-contact-method">
 						<div className="contact-icon whatsapp">
-							<img src="src/assets/whatsapp-icon.svg" alt="Whatsapp" />
+							<img src="/images/svg/whatsapp-icon.svg" alt="Whatsapp" />
 						</div>
 						<div className="contact-buttons">
 							Whatsapp
@@ -147,7 +147,7 @@ const RSVPSection = () => {
 					</div>
 					<div className="rsvp-contact-method">
 						<div className="contact-icon phone">
-							<img src="src/assets/phone-icon.svg" alt="Teléfono" />
+							<img src="/images/svg/phone-icon.svg" alt="Teléfono" />
 						</div>
 						<div className="contact-buttons">
 							Llamada

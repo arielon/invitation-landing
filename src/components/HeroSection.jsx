@@ -18,7 +18,7 @@ const HeroSection = () => (
 						<a href="#gallery">Galería</a>
 					</li>
 				</ul>
-				<img src="src/assets/logo.png" alt="Logo" className="hero-logo" />
+				<img src="/images/logo.png" alt="Logo" className="hero-logo" />
 				<ul className="hero-right-nav">
 					<li>
 						<a href="#countdown">Cuenta Regresiva</a>
@@ -35,7 +35,7 @@ const HeroSection = () => (
 				</ul>
 			</nav>
 			<a className="hero-bottom-right" href="#invitation">
-				<img src="src/assets/arrow.svg" alt="Arrow" className="hero-arrow" />
+				<img src="/images/svg/arrow.svg" alt="Arrow" className="hero-arrow" />
 				<p className="hero-celebrate-text">Festeja con nosotros</p>
 			</a>
 		</div>

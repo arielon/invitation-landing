@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 
 const imagesRow1 = [
-	"src/assets/gallery1.jpg",
-	"src/assets/gallery2.jpg",
-	"src/assets/gallery3.jpg",
-	"src/assets/gallery4.jpg",
-	"src/assets/gallery5.jpg",
+	"/images/gallery1.jpg",
+	"/images/gallery2.jpg",
+	"/images/gallery3.jpg",
+	"/images/gallery4.jpg",
+	"/images/gallery5.jpg",
 ];
 
 const imagesRow2 = [
-	"src/assets/gallery6.jpg",
-	"src/assets/gallery7.jpg",
-	"src/assets/gallery8.jpg",
-	"src/assets/gallery9.jpg",
-	"src/assets/gallery10.jpg",
+	"/images/gallery6.jpg",
+	"/images/gallery7.jpg",
+	"/images/gallery8.jpg",
+	"/images/gallery9.jpg",
+	"/images/gallery10.jpg",
 ];
 
 const imagesRow3 = [
-	"src/assets/gallery11.jpg",
-	"src/assets/gallery12.jpg",
-	"src/assets/gallery13.jpg",
-	"src/assets/gallery14.jpg",
-	"src/assets/gallery15.jpg",
+	"/images/gallery11.jpg",
+	"/images/gallery12.jpg",
+	"/images/gallery13.jpg",
+	"/images/gallery14.jpg",
+	"/images/gallery15.jpg",
 ];
 
 const rowStyles = {

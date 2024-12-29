@@ -6,10 +6,10 @@ const LocationsSection = () => (
 		<div className="location-body">
 			<div className="location-card">
 				<div className="location-image">
-					<img src="src/assets/church.jpg" alt="Iglesia" className="church-img" />
+					<img src="/images/church.jpg" alt="Iglesia" className="church-img" />
 					<div className="location-overlay">
 						<div className="location-content-box">
-							<img src="src/assets/church-icon.svg" alt="Church Icon" className="location-svg" />
+							<img src="/images/svg/church-icon.svg" alt="Church Icon" className="location-svg" />
 							<h3>Parroquia de San Pedro Apóstol de Atocpan</h3>
 							<span className="location-time">Dirección:</span>
 							<p>Francisco I Madero, San Pedro Atocpan, Panchimalco, Milpa Alta, 12200 Ciudad de México, CDMX</p>
@@ -28,10 +28,10 @@ const LocationsSection = () => (
 
 			<div className="location-card">
 				<div className="location-image">
-					<img src="src/assets/venue.jpg" alt="Salón de Eventos" className="venue-img" />
+					<img src="/images/venue.jpg" alt="Salón de Eventos" className="venue-img" />
 					<div className="location-overlay">
 						<div className="location-content-box">
-							<img src="src/assets/venue-icon.svg" alt="Venue Icon" className="location-svg" />
+							<img src="/images/svg/venue-icon.svg" alt="Venue Icon" className="location-svg" />
 							<h3>Hacienda Carmen</h3>
 							<span className="location-time">Dirección:</span>
 							<p>

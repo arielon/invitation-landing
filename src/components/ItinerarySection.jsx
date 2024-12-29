@@ -3,7 +3,7 @@ import React from "react";
 const ItinerarySection = () => (
 	<section id="itinerary" className="itinerary-section">
 		<div className="itinerary-gap">
-			<img src="src/assets/itinerary-deco.svg" alt="Itinerary Decoration" className="itinerary-svg" />
+			<img src="/images/svg/itinerary-deco.svg" alt="Itinerary Decoration" className="itinerary-svg" />
 			<div className="itinerary-container">
 				<h2>Itinerario</h2>
 				<div className="itinerary-schedule">

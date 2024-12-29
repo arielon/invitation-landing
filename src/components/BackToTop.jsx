@@ -26,7 +26,7 @@ const BackToTop = () => {
 
 	return (
 		<button className={`back-to-top ${isVisible ? "show" : ""}`} onClick={scrollToTop} aria-label="Volver al inicio">
-			<img src="src/assets/up-arrow.svg" alt="Volver al inicio" />
+			<img src="/images/svg/up-arrow.svg" alt="Volver al inicio" />
 		</button>
 	);
 };
