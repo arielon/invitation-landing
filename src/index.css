@@ -1,0 +1,29 @@
+body {
+	width: 100%;
+	display: flex;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+#root {
+	width: 100%;
+}
+
+section {
+	width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+span {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	padding: 0px;
+}
