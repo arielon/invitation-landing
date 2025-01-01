@@ -2,10 +2,12 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import nodemailer from "nodemailer";
+import path from "path";
 
 const app = express();
-const port = process.env.PORT || 5000; // Render asigna dinámicamente este puerto
+const port = process.env.PORT || 5000;
 
+// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -37,7 +39,15 @@ app.post("/send", (req, res) => {
 	});
 });
 
-// Asegúrate de que está escuchando correctamente
-app.listen(port, "0.0.0.0", () => {
+// Sirve los archivos estáticos del frontend
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "dist")));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
+// Inicia el servidor
+app.listen(port, () => {
 	console.log(`Servidor corriendo en el puerto ${port}`);
 });
