@@ -8,24 +8,38 @@ const InvitationSection = ({ guestData }) => (
 		</div>
 		<div className="invitation-content">
 			<img className="invitation-top-leaf" height="1.5rem" src="/images/svg/hoja1.svg" />
-			<span className="subtitle">¡{guestData.name}, te invitamos a nuestra boda!</span>
-			<p className="special-text">
-				Nos emociona compartir contigo este día tan especial. Te invitamos a acompañarnos en nuestra boda el 5 de Abril
-				del 2025.
-			</p>
-			<div className="invitation-details">
-				<span className="subtitle2">
-					Pases: <p>{guestData.passes}</p>
-				</span>
-				<span className="subtitle2">
+			<div className="invitation-name">
+				<span className="subtitle">¡{guestData.name}, te invitamos a nuestra boda!</span>
+				<p className="special-text">
+					Nos emociona compartir contigo este día tan especial. Te invitamos a nuestra boda el 5 de Abril del 2025.
+				</p>
+				<div className="invitation-details">
+					<span className="subtitle2">
+						Pases: <p>{guestData.passes}</p>
+					</span>
+					{/* <span className="subtitle2">
 					Mesa: <p>{guestData.table}</p>
-				</span>
+				</span> */}
+				</div>
 			</div>
-			<div className="invitation-buttons">
-				{/* <button onClick={() => downloadQR(guestData)}>Descargar boleto</button> */}
-				<button>
-					<a href="#rsvp">Confirmar asistencia</a>
-				</button>
+			<div className="dress-code">
+				<h4>Código de vestimenta</h4>
+				<div className="dress-content">
+					<img src="/images/svg/women-dress.svg" className="dress" alt="" srcset="" />
+					<p>
+						<b>Mujeres:</b> Formal, Vestido largo o 3/4
+						<br />
+						(evitar color blanco).
+					</p>
+				</div>
+				<div className="dress-content">
+					<img src="/images/svg/men-dress.svg" className="suit" alt="" srcset="" />
+					<p>
+						<b>Hombres:</b> Traje.
+						<br />
+						Opción de zapatos o tenis.
+					</p>
+				</div>
 			</div>
 			<img className="invitation-bottom-leaf" height="1.5rem" src="/images/svg/hoja2.svg" />
 		</div>

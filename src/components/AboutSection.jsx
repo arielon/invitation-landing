@@ -20,14 +20,13 @@ const AboutUsSection = () => (
 		</div>
 		<div className="about-us-story">
 			<p>
-				Nos conocimos hace años, y desde entonces hemos compartido una historia llena de momentos inolvidables. ¡Gracias
-				por ser parte de este día tan especial!
+				Nuestro amor no es de esos a primera vista, nos conocimos hace 13 años y como muchos ya lo saben ni nos
+				hablábamos, si en ese momento nos hubiesen dicho que nos casaremos definitivamente nos reiríamos y no lo
+				creríamos pero el universo ya había conspirado a nuestro favor y volvió a cruzar nuestros caminos. Y si, ahí se
+				convirtió en amor a ultima y a todas las vistas; encontramos nuestro lugar seguro y mágico, ese donde sabes que,
+				aunque estés callado no necesitas más para ser inmensamente feliz. Quienes están destinados a ser siempre acaban
+				siendo.
 			</p>
-		</div>
-		<div className="about-us-confirm-button">
-			<button>
-				<a href="#rsvp">Confirmar asistencia</a>
-			</button>
 		</div>
 	</section>
 );

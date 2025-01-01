@@ -54,7 +54,9 @@ const CountdownSection = () => {
 						<a href="#rsvp">Confirmar Asistencia</a>
 					</button>
 					<button>
-						<a href="#calendar">Añadir a Calendario</a>
+						<a href="https://calendar.app.google/mZv5yS3jmDNTaqs58" target="_blank">
+							Añadir a Calendario
+						</a>
 					</button>
 				</div>
 				<img src="/images/svg/countdown-deco2.svg" alt="Countdown Decoration" className="countdown-svg" />

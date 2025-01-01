@@ -14,7 +14,7 @@ const LocationsSection = () => (
 							<span className="location-time">Dirección:</span>
 							<p>Francisco I Madero, San Pedro Atocpan, Panchimalco, Milpa Alta, 12200 Ciudad de México, CDMX</p>
 							<span className="location-time">
-								Hora:<br></br> 10:00 AM
+								Hora:<br></br> 15:45 PM
 							</span>
 							<button>
 								<a href="https://maps.app.goo.gl/imsbSa2oS7QXinwKA" target="_blank" rel="noopener noreferrer">
@@ -39,7 +39,7 @@ const LocationsSection = () => (
 								CDMX
 							</p>
 							<span className="location-time">
-								Hora:<br></br> 6:30 PM
+								Hora:<br></br> 17:00 PM
 							</span>
 							<button>
 								<a href="https://maps.app.goo.gl/X3GtHjtNWhRT3gAp6" target="_blank" rel="noopener noreferrer">
