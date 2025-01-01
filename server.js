@@ -4,26 +4,27 @@ import cors from "cors";
 import nodemailer from "nodemailer";
 
 const app = express();
-const port = process.env.PORT || 5000; // Render asigna dinámicamente el puerto
+const port = process.env.PORT || 5000; // Render asigna dinámicamente este puerto
 
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configura tu correo
+// Configuración de nodemailer
 const transporter = nodemailer.createTransport({
 	service: "Gmail",
 	auth: {
-		user: process.env.EMAIL_USER, // Usa variables de entorno
+		user: process.env.EMAIL_USER,
 		pass: process.env.EMAIL_PASS,
 	},
 });
 
+// Endpoint para manejar las solicitudes de confirmación
 app.post("/send", (req, res) => {
 	const { name, email, phone, attendance } = req.body;
 
 	const mailOptions = {
 		from: email,
-		to: process.env.RECIPIENT_EMAIL, // Correo destinatario
+		to: process.env.RECIPIENT_EMAIL,
 		subject: "Confirmación de Asistencia",
 		text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nAsistirá: ${attendance}`,
 	};
@@ -36,6 +37,7 @@ app.post("/send", (req, res) => {
 	});
 });
 
+// Asegúrate de que está escuchando correctamente
 app.listen(port, "0.0.0.0", () => {
 	console.log(`Servidor corriendo en el puerto ${port}`);
 });
