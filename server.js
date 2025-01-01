@@ -4,7 +4,7 @@ import cors from "cors";
 import nodemailer from "nodemailer";
 
 const app = express();
-const port = process.env.PORT || 5001; // Para el puerto dinámico en el servidor
+const port = process.env.PORT || 5000; // Render asigna dinámicamente el puerto
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -36,6 +36,6 @@ app.post("/send", (req, res) => {
 	});
 });
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
 	console.log(`Servidor corriendo en el puerto ${port}`);
 });
