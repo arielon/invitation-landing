@@ -9,16 +9,14 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Leer JSON manualmente usando fs
-const guests = JSON.parse(readFileSync("./data/guests.json", "utf-8"));
-
 app.use(cors());
 app.use(bodyParser.json());
 
-// Ruta para obtener datos de invitados
-app.get("/guest/:name", (req, res) => {
-	const { name } = req.params;
-	const guest = guests.find((g) => g.name.toLowerCase() === name.toLowerCase());
+// Endpoint para obtener datos de invitados
+app.get("/guest/:route", (req, res) => {
+	const { route } = req.params;
+	const guest = guests.find((g) => g.route === route); // Busca por 'route'
+
 	if (guest) {
 		res.json(guest);
 	} else {

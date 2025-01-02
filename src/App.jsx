@@ -16,12 +16,11 @@ import MusicPlayer from "./components/MusicPlayer";
 import "./App.css";
 
 function GuestPage() {
-	const { guestName } = useParams();
+	const { guestRoute } = useParams(); // Obtiene el 'route' desde la URL
 	const [guestData, setGuestData] = useState(null);
 
 	useEffect(() => {
-		const encodedName = encodeURIComponent(guestName);
-		fetch(`https://invitation-landing.onrender.com/guest/${encodedName}`)
+		fetch(`https://invitation-landing.onrender.com/guest/${guestRoute}`) // Consulta el backend con 'route'
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error("Invitado no encontrado");
@@ -30,10 +29,10 @@ function GuestPage() {
 			})
 			.then((data) => setGuestData(data))
 			.catch((error) => {
-				console.error("Error al obtener datos del invitado:", error);
+				console.error("Error:", error);
 				setGuestData(null);
 			});
-	}, [guestName]);
+	}, [guestRoute]);
 
 	if (!guestData) {
 		return <p>Cargando...</p>;
@@ -62,7 +61,7 @@ export default function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/guest/:guestName" element={<GuestPage />} />
+				<Route path="/guest/:guestRoute" element={<GuestPage />} /> {/* Maneja URLs personalizadas */}
 				<Route path="/" element={<GuestPage />} />
 			</Routes>
 		</Router>
