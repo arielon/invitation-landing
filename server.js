@@ -16,7 +16,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Ruta para obtener datos de invitados
-app.get("/invitado/:name", (req, res) => {
+app.get("/guest/:name", (req, res) => {
 	const { name } = req.params;
 	const guest = guests.find((g) => g.name.toLowerCase() === name.toLowerCase());
 	if (guest) {

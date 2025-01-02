@@ -16,15 +16,14 @@ import MusicPlayer from "./components/MusicPlayer";
 import "./App.css";
 
 function App() {
-	const { guestName } = useParams(); // Captura el nombre desde la URL
+	const location = useLocation();
 	const [guestData, setGuestData] = useState(null);
-	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		const route = location.pathname.replace("/invitado/", ""); // Retira la parte de la ruta
-		const encodedName = encodeURIComponent(route);
+		const route = location.pathname.replace("/guest/", ""); // Retira la parte de la ruta
+		const encodedName = encodeURIComponent(route); // Codifica correctamente el nombre
 
-		fetch(`https://invitation-landing.onrender.com/invitado/${encodedName}`)
+		fetch(`https://invitation-landing.onrender.com/guest/${encodedName}`)
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error("Invitado no encontrado");
@@ -33,7 +32,7 @@ function App() {
 			})
 			.then((data) => setGuestData(data))
 			.catch((error) => {
-				console.error(error);
+				console.error("Error al obtener datos del invitado:", error);
 				setGuestData(null);
 			});
 	}, [location.pathname]);
@@ -43,7 +42,7 @@ function App() {
 	}
 
 	if (!guestData) {
-		return <p>Invitado no encontrado. Verifica tu enlace.</p>;
+		return <p>Cargando...</p>;
 	}
 
 	return (
@@ -68,10 +67,7 @@ function App() {
 export default function AppWrapper() {
 	return (
 		<Router>
-			<Routes>
-				<Route path="/invitado/:guestName" element={<App />} />
-				<Route path="*" element={<p>Página no encontrada.</p>} />
-			</Routes>
+			<App />
 		</Router>
 	);
 }
