@@ -21,28 +21,22 @@ function App() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		if (guestName) {
-			// Codifica el nombre del invitado antes de enviarlo
-			const encodedName = encodeURIComponent(guestName);
+		const route = location.pathname.replace("/invitado/", ""); // Retira la parte de la ruta
+		const encodedName = encodeURIComponent(route);
 
-			fetch(`https://invitation-landing.onrender.com/guest/${encodedName}`)
-				.then((response) => {
-					if (!response.ok) {
-						throw new Error("Invitado no encontrado");
-					}
-					return response.json();
-				})
-				.then((data) => {
-					setGuestData(data);
-					setLoading(false);
-				})
-				.catch((error) => {
-					console.error(error);
-					setGuestData(null);
-					setLoading(false);
-				});
-		}
-	}, [guestName]);
+		fetch(`https://invitation-landing.onrender.com/invitado/${encodedName}`)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("Invitado no encontrado");
+				}
+				return response.json();
+			})
+			.then((data) => setGuestData(data))
+			.catch((error) => {
+				console.error(error);
+				setGuestData(null);
+			});
+	}, [location.pathname]);
 
 	if (loading) {
 		return <p>Cargando datos del invitado...</p>;
