@@ -22,7 +22,10 @@ function App() {
 
 	useEffect(() => {
 		if (guestName) {
-			fetch(`https://invitation-landing.onrender.com/guest/${guestName}`)
+			// Codifica el nombre del invitado antes de enviarlo
+			const encodedName = encodeURIComponent(guestName);
+
+			fetch(`https://invitation-landing.onrender.com/guest/${encodedName}`)
 				.then((response) => {
 					if (!response.ok) {
 						throw new Error("Invitado no encontrado");
