@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import sendgrid from "@sendgrid/mail";
-const guests = require("./data/guests.json");
+import guests from "./data/guests.json" assert { type: "json" };
 
 // Inicializar Express
 const app = express();
