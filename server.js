@@ -3,12 +3,14 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import sendgrid from "@sendgrid/mail";
 import { readFileSync } from "fs";
-import guests from "./data/guests.json" assert { type: "json" };
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+// Leer JSON manualmente usando fs
+const guests = JSON.parse(readFileSync("./data/guests.json", "utf-8"));
 
 app.use(cors());
 app.use(bodyParser.json());
