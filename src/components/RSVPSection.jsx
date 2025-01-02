@@ -15,8 +15,14 @@ const RSVPSection = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		if (!formData.name || !formData.email || !formData.phone || !formData.attendance) {
+			alert("Por favor, llena todos los campos.");
+			return;
+		}
+
 		try {
-			const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/send`, {
+			const response = await fetch("https://invitation-landing.onrender.com/send", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -25,19 +31,14 @@ const RSVPSection = () => {
 			});
 
 			if (response.ok) {
-				alert("¡Gracias por confirmar tu asistencia!");
-				setFormData({
-					name: "",
-					email: "",
-					phone: "",
-					attendance: "",
-				});
+				alert("Tu confirmación ha sido enviada correctamente.");
+				setFormData({ name: "", email: "", phone: "", attendance: "" }); // Limpia el formulario
 			} else {
-				alert("Hubo un problema al enviar tu confirmación. Por favor, inténtalo de nuevo.");
+				alert("Hubo un problema al enviar tu confirmación. Inténtalo de nuevo.");
 			}
 		} catch (error) {
 			console.error("Error al enviar el formulario:", error);
-			alert("Error al enviar el formulario. Por favor, inténtalo más tarde.");
+			alert("No se pudo enviar tu confirmación. Intenta más tarde.");
 		}
 	};
 

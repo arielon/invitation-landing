@@ -1,53 +1,50 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import nodemailer from "nodemailer";
-import path from "path";
+import sendgrid from "@sendgrid/mail";
+
+// Configura SendGrid API Key
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configuración de nodemailer
-const transporter = nodemailer.createTransport({
-	service: "Gmail",
-	auth: {
-		user: process.env.EMAIL_USER,
-		pass: process.env.EMAIL_PASS,
-	},
-});
-
-// Endpoint para manejar las solicitudes de confirmación
-app.post("/send", (req, res) => {
+// Ruta para manejar los datos del formulario
+app.post("/send", async (req, res) => {
 	const { name, email, phone, attendance } = req.body;
 
-	const mailOptions = {
-		from: email,
-		to: process.env.RECIPIENT_EMAIL,
-		subject: "Confirmación de Asistencia",
-		text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nAsistirá: ${attendance}`,
+	// Correo de confirmación al organizador
+	const organizerEmail = {
+		from: process.env.FROM_EMAIL, // Autenticado en SendGrid
+		to: process.env.RECIPIENT_EMAIL, // Correo del organizador
+		subject: "Nueva Confirmación de Asistencia",
+		text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nAsistirá: ${attendance ? "Sí" : "No"}`,
 	};
 
-	transporter.sendMail(mailOptions, (error, info) => {
-		if (error) {
-			return res.status(500).send(error.toString());
-		}
-		res.status(200).send("Correo enviado correctamente.");
-	});
+	// Correo de confirmación al invitado
+	const guestEmail = {
+		from: process.env.FROM_EMAIL, // Autenticado en SendGrid
+		to: email, // Correo del invitado
+		subject: "Confirmación de tu Asistencia",
+		text: `¡Hola ${name}!\n\nGracias por confirmar tu asistencia a nuestra boda. Estamos emocionados de compartir este día especial contigo.\n\nDetalles proporcionados:\n- Teléfono: ${phone}\n- Asistirá: ${
+			attendance ? "Sí" : "No"
+		}\n\nSi tienes preguntas, no dudes en contactarnos.\n\n¡Nos vemos pronto!\n\nFátima y Carlo`,
+	};
+
+	try {
+		// Enviar correos
+		await sendgrid.send(organizerEmail);
+		await sendgrid.send(guestEmail);
+		res.status(200).send("Correos enviados correctamente.");
+	} catch (error) {
+		console.error("Error al enviar correos:", error);
+		res.status(500).send("Error al enviar correos.");
+	}
 });
 
-// Sirve los archivos estáticos del frontend
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "dist")));
-
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
-
-// Inicia el servidor
 app.listen(port, () => {
 	console.log(`Servidor corriendo en el puerto ${port}`);
 });
