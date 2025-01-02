@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import InvitationSection from "./components/InvitationSection";
 import AboutSection from "./components/AboutSection";
@@ -15,12 +15,13 @@ import BackToTop from "./components/BackToTop";
 import MusicPlayer from "./components/MusicPlayer";
 import "./App.css";
 
-function GuestPage() {
-	const { guestRoute } = useParams(); // Obtiene el 'route' desde la URL
+function App() {
+	const location = useLocation();
 	const [guestData, setGuestData] = useState(null);
 
 	useEffect(() => {
-		fetch(`https://invitation-landing.onrender.com/guest/${guestRoute}`) // Consulta el backend con 'route'
+		const route = location.pathname.slice(1); // Obtiene la ruta sin "/"
+		fetch(`https://invitation-landing.onrender.com/${route}`)
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error("Invitado no encontrado");
@@ -29,10 +30,10 @@ function GuestPage() {
 			})
 			.then((data) => setGuestData(data))
 			.catch((error) => {
-				console.error("Error:", error);
+				console.error(error);
 				setGuestData(null);
 			});
-	}, [guestRoute]);
+	}, [location.pathname]);
 
 	if (!guestData) {
 		return <p>Cargando...</p>;
@@ -57,13 +58,10 @@ function GuestPage() {
 	);
 }
 
-export default function App() {
+export default function AppWrapper() {
 	return (
 		<Router>
-			<Routes>
-				<Route path="/guest/:guestRoute" element={<GuestPage />} /> {/* Maneja URLs personalizadas */}
-				<Route path="/" element={<GuestPage />} />
-			</Routes>
+			<App />
 		</Router>
 	);
 }

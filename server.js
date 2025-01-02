@@ -9,16 +9,16 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Leer JSON manualmente usando fs
+// Cargar el archivo JSON con readFileSync
 const guests = JSON.parse(readFileSync("./data/guests.json", "utf-8"));
 
 app.use(cors());
 app.use(bodyParser.json());
 
-// Endpoint para obtener datos de invitados
-app.get("/guest/:route", (req, res) => {
+// Ruta para obtener datos de un invitado
+app.get("/:route", (req, res) => {
 	const { route } = req.params;
-	const guest = guests.find((g) => g.route === route); // Busca por 'route'
+	const guest = guests.find((g) => g.route === route.toLowerCase());
 
 	if (guest) {
 		res.json(guest);
@@ -27,10 +27,14 @@ app.get("/guest/:route", (req, res) => {
 	}
 });
 
-// Ruta para manejar datos del formulario y enviar correos
+// Configurar SendGrid
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+
+// Ruta para manejar el envío de confirmaciones
 app.post("/send", async (req, res) => {
 	const { name, email, phone, attendance } = req.body;
 
+	// Correo para el organizador
 	const organizerEmail = {
 		from: process.env.FROM_EMAIL,
 		to: process.env.RECIPIENT_EMAIL,
@@ -38,13 +42,14 @@ app.post("/send", async (req, res) => {
 		text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nAsistirá: ${attendance ? "Sí" : "No"}`,
 	};
 
+	// Correo de confirmación para el invitado
 	const guestEmail = {
 		from: process.env.FROM_EMAIL,
 		to: email,
 		subject: "Confirmación de tu Asistencia",
 		text: `¡Hola ${name}!\n\nGracias por confirmar tu asistencia a nuestra boda. Estamos emocionados de compartir este día especial contigo.\n\nDetalles proporcionados:\n- Teléfono: ${phone}\n- Asistirá: ${
 			attendance ? "Sí" : "No"
-		}\n\nSi tienes preguntas, no dudes en contactarnos.\n\n¡Nos vemos pronto!\n\nFátima y Carlo`,
+		}\n\n¡Nos vemos pronto!\n\nFátima y Carlo`,
 	};
 
 	try {
