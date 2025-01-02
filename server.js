@@ -2,22 +2,23 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import sendgrid from "@sendgrid/mail";
-import guests from "./data/guests.json" assert { type: "json" };
+import { readFileSync } from "fs";
 
-// Inicializar Express
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+
 const app = express();
 const port = process.env.PORT || 5000;
+
+// Leer JSON manualmente usando fs
+const guests = JSON.parse(readFileSync("./data/guests.json", "utf-8"));
 
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configurar SendGrid API Key
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
-
-// Ruta para obtener datos de un invitado
-app.get("/guest/:route", (req, res) => {
-	const { route } = req.params;
-	const guest = guests.find((g) => g.route.toLowerCase() === route.toLowerCase());
+// Ruta para obtener datos de invitados
+app.get("/guest/:name", (req, res) => {
+	const { name } = req.params;
+	const guest = guests.find((g) => g.name.toLowerCase() === name.toLowerCase());
 
 	if (guest) {
 		res.json(guest);
@@ -26,30 +27,27 @@ app.get("/guest/:route", (req, res) => {
 	}
 });
 
-// Ruta para manejar los datos del formulario
+// Ruta para manejar datos del formulario y enviar correos
 app.post("/send", async (req, res) => {
 	const { name, email, phone, attendance } = req.body;
 
-	// Correo de confirmación al organizador
 	const organizerEmail = {
-		from: process.env.FROM_EMAIL, // Autenticado en SendGrid
-		to: process.env.RECIPIENT_EMAIL, // Correo del organizador
+		from: process.env.FROM_EMAIL,
+		to: process.env.RECIPIENT_EMAIL,
 		subject: "Nueva Confirmación de Asistencia",
-		text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nAsistirá: ${attendance === "yes" ? "Sí" : "No"}`,
+		text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nAsistirá: ${attendance ? "Sí" : "No"}`,
 	};
 
-	// Correo de confirmación al invitado
 	const guestEmail = {
-		from: process.env.FROM_EMAIL, // Autenticado en SendGrid
-		to: email, // Correo del invitado
+		from: process.env.FROM_EMAIL,
+		to: email,
 		subject: "Confirmación de tu Asistencia",
 		text: `¡Hola ${name}!\n\nGracias por confirmar tu asistencia a nuestra boda. Estamos emocionados de compartir este día especial contigo.\n\nDetalles proporcionados:\n- Teléfono: ${phone}\n- Asistirá: ${
-			attendance === "yes" ? "Sí" : "No"
+			attendance ? "Sí" : "No"
 		}\n\nSi tienes preguntas, no dudes en contactarnos.\n\n¡Nos vemos pronto!\n\nFátima y Carlo`,
 	};
 
 	try {
-		// Enviar correos
 		await sendgrid.send(organizerEmail);
 		await sendgrid.send(guestEmail);
 		res.status(200).send("Correos enviados correctamente.");
@@ -59,7 +57,6 @@ app.post("/send", async (req, res) => {
 	}
 });
 
-// Iniciar el servidor
 app.listen(port, () => {
 	console.log(`Servidor corriendo en el puerto ${port}`);
 });
