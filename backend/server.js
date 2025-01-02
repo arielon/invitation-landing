@@ -4,10 +4,8 @@ import cors from "cors";
 import sendgrid from "@sendgrid/mail";
 import { readFileSync } from "fs";
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
-
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 // Cargar el archivo JSON con readFileSync
 const guests = JSON.parse(readFileSync("./data/guests.json", "utf-8"));

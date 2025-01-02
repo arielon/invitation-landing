@@ -41,24 +41,20 @@ function App() {
 	const [error, setError] = useState(false);
 
 	useEffect(() => {
-		const route = location.pathname.slice(1); // Obtiene la ruta sin "/"
-		if (route) {
-			fetch(`https://invitation-landing.onrender.com/${route}`)
-				.then((response) => {
-					if (!response.ok) {
-						throw new Error("Invitado no encontrado");
-					}
-					return response.json();
-				})
-				.then((data) => {
-					setGuestData(data);
-					setError(false);
-				})
-				.catch(() => {
-					setGuestData(null);
-					setError(true);
-				});
-		}
+		const route = location.pathname.slice(1);
+		const backendUrl = import.meta.env.VITE_BACKEND_URL;
+		fetch(`${backendUrl}/${route}`)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("Invitado no encontrado");
+				}
+				return response.json();
+			})
+			.then((data) => setGuestData(data))
+			.catch((error) => {
+				console.error(error);
+				setGuestData(null);
+			});
 	}, [location.pathname]);
 
 	if (error) {
