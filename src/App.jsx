@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import InvitationSection from "./components/InvitationSection";
 import AboutSection from "./components/AboutSection";
@@ -16,27 +16,37 @@ import MusicPlayer from "./components/MusicPlayer";
 import "./App.css";
 
 function App() {
-	const location = useLocation();
+	const { guestName } = useParams(); // Captura el nombre desde la URL
 	const [guestData, setGuestData] = useState(null);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		const route = location.pathname.replace("/", ""); // Obtiene la ruta de la URL
-		fetch(`https://invitation-landing.onrender.com/guest/${route}`)
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error("Invitado no encontrado");
-				}
-				return response.json();
-			})
-			.then((data) => setGuestData(data))
-			.catch((error) => {
-				console.error(error);
-				setGuestData(null);
-			});
-	}, [location.pathname]);
+		if (guestName) {
+			fetch(`https://invitation-landing.onrender.com/guest/${guestName}`)
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error("Invitado no encontrado");
+					}
+					return response.json();
+				})
+				.then((data) => {
+					setGuestData(data);
+					setLoading(false);
+				})
+				.catch((error) => {
+					console.error(error);
+					setGuestData(null);
+					setLoading(false);
+				});
+		}
+	}, [guestName]);
+
+	if (loading) {
+		return <p>Cargando datos del invitado...</p>;
+	}
 
 	if (!guestData) {
-		return <p>Cargando...</p>;
+		return <p>Invitado no encontrado. Verifica tu enlace.</p>;
 	}
 
 	return (
@@ -61,7 +71,10 @@ function App() {
 export default function AppWrapper() {
 	return (
 		<Router>
-			<App />
+			<Routes>
+				<Route path="/invitado/:guestName" element={<App />} />
+				<Route path="*" element={<p>Página no encontrada.</p>} />
+			</Routes>
 		</Router>
 	);
 }
