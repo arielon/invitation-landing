@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import InvitationSection from "./components/InvitationSection";
 import AboutSection from "./components/AboutSection";
@@ -11,16 +12,32 @@ import GiftsSection from "./components/GiftsSection";
 import LocationsSection from "./components/LocationsSection";
 import RSVPSection from "./components/RSVPSection";
 import BackToTop from "./components/BackToTop";
-import "./App.css";
 import MusicPlayer from "./components/MusicPlayer";
+import "./App.css";
 
 function App() {
-	// Temporary hardcoded data for development
-	const guestData = {
-		name: "Juan Pérez",
-		passes: 4,
-		table: 4,
-	};
+	const location = useLocation();
+	const [guestData, setGuestData] = useState(null);
+
+	useEffect(() => {
+		const route = location.pathname.replace("/", ""); // Obtiene la ruta de la URL
+		fetch(`https://invitation-landing.onrender.com/guest/${route}`)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("Invitado no encontrado");
+				}
+				return response.json();
+			})
+			.then((data) => setGuestData(data))
+			.catch((error) => {
+				console.error(error);
+				setGuestData(null);
+			});
+	}, [location.pathname]);
+
+	if (!guestData) {
+		return <p>Cargando...</p>;
+	}
 
 	return (
 		<div className="app-container">
@@ -41,4 +58,10 @@ function App() {
 	);
 }
 
-export default App;
+export default function AppWrapper() {
+	return (
+		<Router>
+			<App />
+		</Router>
+	);
+}
