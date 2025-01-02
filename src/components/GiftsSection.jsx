@@ -11,8 +11,7 @@ const GiftSection = () => (
 			<img className="gift-right-svg" src="/images/svg/right-decor.svg" alt="Right Decor" />
 		</div>
 		<p className="gift-description">
-			Si deseas ayudarnos a iniciar nuestra vida juntos, hemos preparado una mesa de regalos en Liverpool con artículos
-			que serán parte de nuestro hogar y recuerdos especiales de este gran día.
+			Lo más importante es tu presencia, pero si deseas hacernos un presente, te dejamos algunas sugerencias de regalos.
 		</p>
 		<div className="gift-button">
 			<button>
