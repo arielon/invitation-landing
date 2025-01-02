@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import sendgrid from "@sendgrid/mail";
 import { readFileSync } from "fs";
+import guests from "./data/guests.json" assert { type: "json" };
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
