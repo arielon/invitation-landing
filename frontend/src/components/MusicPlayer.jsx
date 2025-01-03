@@ -45,6 +45,7 @@ const MusicPlayer = () => {
 					cursor: "pointer",
 				}}
 				onClick={togglePlay}>
+				¡Ponle Play!
 				{playing ? (
 					<img
 						src="/images/svg/pause-icon.svg" // Reemplaza con tu SVG de pausa

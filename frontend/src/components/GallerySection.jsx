@@ -58,19 +58,17 @@ const GallerySection = () => {
 
 	return (
 		<section id="gallery" className="gallery-section">
-			<AnimatedComponent animation={fadeIn} delay={0.2}>
-				<h2>Galería</h2>
-				<div className="gallery-container">
-					{renderRow(imagesRow1, "row-1")}
-					{renderRow(imagesRow2, "row-2", true)} {/* Reverse animation */}
-					{renderRow(imagesRow3, "row-3")}
+			<h2>Galería</h2>
+			<div className="gallery-container">
+				{renderRow(imagesRow1, "row-1")}
+				{renderRow(imagesRow2, "row-2", true)} {/* Reverse animation */}
+				{renderRow(imagesRow3, "row-3")}
+			</div>
+			{lightbox.isOpen && (
+				<div className="lightbox" onClick={closeLightbox}>
+					<img src={lightbox.currentImage} alt="Full View" />
 				</div>
-				{lightbox.isOpen && (
-					<div className="lightbox" onClick={closeLightbox}>
-						<img src={lightbox.currentImage} alt="Full View" />
-					</div>
-				)}
-			</AnimatedComponent>
+			)}
 		</section>
 	);
 };

@@ -47,7 +47,7 @@ const ParentsSection = () => (
 				<div className="parent-card">
 					<img src="/images/svg/parent-deco2.svg" alt="Decoration" className="parent-deco-top hide-mobile" />
 					<div className="parent-in">
-						<img src="/images/parent4.png" alt="Parent 4" className="parent-image" />
+						<img src="/images/parent4.jpg" alt="Parent 4" className="parent-image" />
 						<h3>Alberto Barajas</h3>
 						<p className="parent-text">Padre del novio.</p>
 					</div>
