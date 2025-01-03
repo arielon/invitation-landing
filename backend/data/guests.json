@@ -564,9 +564,9 @@
 		"family": false
 	},
 	{
-		"name": "Xavier Medina",
+		"name": "Javier Medina",
 		"passes": 2,
-		"route": "xavier-medina",
+		"route": "javier-medina",
 		"family": false
 	},
 	{
@@ -577,7 +577,7 @@
 	},
 	{
 		"name": "Alberto Medina",
-		"passes": 1,
+		"passes": 0,
 		"route": "alberto-medina",
 		"family": false
 	},
@@ -618,9 +618,9 @@
 		"family": false
 	},
 	{
-		"name": "Bárbara González",
+		"name": "Bárbara Alba",
 		"passes": 2,
-		"route": "barbara-gonzalez",
+		"route": "barbara-alba",
 		"family": false
 	},
 	{
