@@ -6,11 +6,19 @@ const InvitationSection = ({ guestData }) => {
 	// Determinar si el invitado es una familia o un individuo
 	const isFamily = guestData.isFamily;
 
+	// Verificar si el nombre contiene "Comodin Carlo"
+	const isSpecialGuest = guestData.name.includes("Comodin Carlo 1");
+
 	// Textos dinámicos
-	const invitationText = isFamily
+	const invitationText = isSpecialGuest
+		? "Te esperamos en nuestra boda!"
+		: isFamily
 		? `¡${guestData.name}, los invitamos a nuestra boda!`
 		: `¡${guestData.name}, te invitamos a nuestra boda!`;
-	const specialText = isFamily
+
+	const specialText = isSpecialGuest
+		? "Estamos emocionados de compartir este día tan especial contigo. La boda será el 5 de Abril del 2025."
+		: isFamily
 		? "Nos emociona compartir este día tan especial con ustedes. La boda será el 5 de Abril del 2025."
 		: "Nos emociona compartir este día tan especial contigo. La boda será el 5 de Abril del 2025.";
 
