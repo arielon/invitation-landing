@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AnimatedComponent from "./AnimatedComponent";
+import { fadeIn, fadeInFromLeft, fadeInFromRight } from "../animations/animations";
 
 const imagesRow1 = [
 	"/images/gallery1.jpg",
@@ -56,17 +58,19 @@ const GallerySection = () => {
 
 	return (
 		<section id="gallery" className="gallery-section">
-			<h2>Galería</h2>
-			<div className="gallery-container">
-				{renderRow(imagesRow1, "row-1")}
-				{renderRow(imagesRow2, "row-2", true)} {/* Reverse animation */}
-				{renderRow(imagesRow3, "row-3")}
-			</div>
-			{lightbox.isOpen && (
-				<div className="lightbox" onClick={closeLightbox}>
-					<img src={lightbox.currentImage} alt="Full View" />
+			<AnimatedComponent animation={fadeIn} delay={0.2}>
+				<h2>Galería</h2>
+				<div className="gallery-container">
+					{renderRow(imagesRow1, "row-1")}
+					{renderRow(imagesRow2, "row-2", true)} {/* Reverse animation */}
+					{renderRow(imagesRow3, "row-3")}
 				</div>
-			)}
+				{lightbox.isOpen && (
+					<div className="lightbox" onClick={closeLightbox}>
+						<img src={lightbox.currentImage} alt="Full View" />
+					</div>
+				)}
+			</AnimatedComponent>
 		</section>
 	);
 };

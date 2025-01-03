@@ -9,10 +9,10 @@ const InvitationSection = ({ guestData }) => (
 			<img className="invitation-top-right-svg" width="7rem" src="/images/svg/invitado-right.svg" />
 		</div>
 		<div className="invitation-content">
-			<AnimatedComponent animation={fadeIn}>
+			<AnimatedComponent animation={fadeIn} delay={0.2}>
 				<img className="invitation-top-leaf" height="1.5rem" src="/images/svg/hoja1.svg" />
 			</AnimatedComponent>
-			<AnimatedComponent animation={fadeInFromLeft}>
+			<AnimatedComponent animation={fadeInFromLeft} delay={0.2}>
 				<div className="invitation-name">
 					<span className="subtitle">¡{guestData.name}, te invitamos a nuestra boda!</span>
 					<p className="special-text">
@@ -29,7 +29,7 @@ const InvitationSection = ({ guestData }) => (
 					</div>
 				</div>
 			</AnimatedComponent>
-			<AnimatedComponent animation={fadeInFromRight}>
+			<AnimatedComponent animation={fadeInFromRight} delay={0.2}>
 				<div className="dress-code">
 					<h4>Código de vestimenta</h4>
 					<div className="dress-content">

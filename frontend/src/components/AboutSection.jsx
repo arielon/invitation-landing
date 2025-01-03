@@ -10,21 +10,21 @@ const AboutUsSection = () => (
 			<img className="about-us-right-svg" src="/images/svg/us-right-svg.svg" />
 		</div>
 		<div className="about-us-images">
-			<AnimatedComponent animation={fadeInFromLeft}>
+			<AnimatedComponent animation={fadeInFromLeft} delay={0.2}>
 				<div className="about-us-image-container">
 					<img src="/images/bride.png" alt="Bride" className="about-us-image" />
 					<h3>Fátima</h3>
 				</div>
 			</AnimatedComponent>
 			<div className="about-us-ampersand">&</div>
-			<AnimatedComponent animation={fadeInFromLeft}>
+			<AnimatedComponent animation={fadeInFromRight} delay={0.2}>
 				<div className="about-us-image-container">
 					<img src="/images/groom.png" alt="Groom" className="about-us-image" />
 					<h3>Carlo</h3>
 				</div>
 			</AnimatedComponent>
 		</div>
-		<AnimatedComponent animation={fadeIn}>
+		<AnimatedComponent animation={fadeIn} delay={0.2}>
 			<div className="about-us-story">
 				<p>
 					Nuestro amor no es de esos a primera vista, nos conocimos hace 13 años y como muchos ya lo saben ni nos
