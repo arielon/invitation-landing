@@ -79,7 +79,7 @@
 	},
 	{
 		"name": "Familia Schröter de la Cruz",
-		"route": "familia-schröter-de-la-cruz",
+		"route": "familia-schroter-de-la-cruz",
 		"passes": 3,
 		"isFamily": true
 	},
@@ -115,7 +115,7 @@
 	},
 	{
 		"name": "Familia Lugo Tuñón",
-		"route": "familia-lugo-tunón",
+		"route": "familia-lugo-tunon",
 		"passes": 6,
 		"isFamily": true
 	},
@@ -225,7 +225,7 @@
 		"name": "Diana L. Pérez",
 		"passes": 1,
 		"isFamily": false,
-		"route": "diana-l.-perez"
+		"route": "diana-l-perez"
 	},
 	{
 		"name": "Silvia Gonzalez",
@@ -408,15 +408,15 @@
 		"isFamily": false
 	},
 	{
-		"name": "Stefany Guerrero",
+		"name": "Sthefani Guerrero",
 		"passes": 2,
-		"route": "stefany-guerrero",
+		"route": "sthefani-guerrero",
 		"isFamily": false
 	},
 	{
-		"name": "Familai Contreras Rosano",
+		"name": "Familia Contreras Rosano",
 		"passes": 3,
-		"route": "familai-contreras-rosano",
+		"route": "familia-contreras-rosano",
 		"isFamily": false
 	},
 	{
