@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 // Ruta para obtener datos de un invitado
 app.get("/:route", (req, res) => {
 	const { route } = req.params;
-	const guest = guests.find((g) => g.route === route.toLowerCase());
+	const guest = guests.find((g) => g.route.toLowerCase() === route.toLowerCase());
 
 	if (guest) {
 		res.json(guest);

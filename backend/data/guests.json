@@ -1,512 +1,650 @@
 [
 	{
 		"name": "Guadalupe Rosano",
+		"route": "guadalupe-rosano",
 		"passes": 3,
-		"route": "guadalupe-rosano"
+		"isFamily": false
 	},
 	{
 		"name": "Diego Avila",
+		"route": "diego-avila",
 		"passes": 4,
-		"route": "diego-avila"
+		"isFamily": false
 	},
 	{
-		"name": "Gabriela Tadeo",
-		"passes": 5,
-		"route": "gabriela-tadeo"
+		"name": "Familia Delgado Tadeo",
+		"route": "familia-delgado-tadeo",
+		"passes": 3,
+		"isFamily": true
+	},
+	{
+		"name": "Familia Tadeo Rojas",
+		"route": "familia-tadeo-rojas",
+		"passes": 2,
+		"isFamily": true
 	},
 	{
 		"name": "Joaquin Gonzalez",
+		"route": "joaquin-gonzalez",
 		"passes": 4,
-		"route": "joaquin-gonzalez"
+		"isFamily": false
 	},
 	{
 		"name": "Guadalupe Avila",
+		"route": "guadalupe-avila",
 		"passes": 1,
-		"route": "guadalupe-avila"
+		"isFamily": false
 	},
 	{
 		"name": "Maria de Jesus Avila",
+		"route": "maria-de-jesus-avila",
 		"passes": 1,
-		"route": "maria-de-jesus-avila"
+		"isFamily": false
 	},
 	{
-		"name": "Catalina Avila",
+		"name": "Catalina Avila&Moises Camacho",
+		"route": "catalina-avilaymoises-camacho",
 		"passes": 3,
-		"route": "catalina-avila"
+		"isFamily": false
 	},
 	{
-		"name": "Santiago Guerrero",
+		"name": "Familia Guerrero Camacho",
+		"route": "familia-guerrero-camacho",
 		"passes": 4,
-		"route": "santiago-guerrero"
+		"isFamily": true
 	},
 	{
-		"name": "Alicia Teja",
+		"name": "Familia Villegas Teja",
+		"route": "familia-villegas-teja",
 		"passes": 3,
-		"route": "alicia-teja"
+		"isFamily": true
 	},
 	{
-		"name": "Germano Teja",
+		"name": "Germán Teja",
+		"route": "germán-teja",
 		"passes": 1,
-		"route": "germano-teja"
+		"isFamily": false
 	},
 	{
-		"name": "Antonia Rosano",
+		"name": "Familia Vallarta Rosano",
+		"route": "familia-vallarta-rosano",
 		"passes": 6,
-		"route": "antonia-rosano"
+		"isFamily": true
 	},
 	{
-		"name": "Simona Aviles",
-		"passes": 5,
-		"route": "simona-aviles"
+		"name": "Familia de la Cruz Aviles",
+		"route": "familia-de-la-cruz-aviles",
+		"passes": 2,
+		"isFamily": true
 	},
 	{
-		"name": "Mariano de la Cruz",
+		"name": "Familia Schröter de la Cruz",
+		"route": "familia-schröter-de-la-cruz",
 		"passes": 3,
-		"route": "mariano-de-la-cruz"
+		"isFamily": true
 	},
 	{
-		"name": "Benjamin de la Cruz",
+		"name": "Mariano de la Cruz y fam",
+		"route": "mariano-de-la-cruz-y-fam",
 		"passes": 3,
-		"route": "benjamin-de-la-cruz"
+		"isFamily": false
+	},
+	{
+		"name": "Benjamin de la Cruz y fam",
+		"route": "benjamin-de-la-cruz-y-fam",
+		"passes": 3,
+		"isFamily": false
 	},
 	{
 		"name": "Adelina Contreras",
+		"route": "adelina-contreras",
 		"passes": 3,
-		"route": "adelina-contreras"
+		"isFamily": false
 	},
 	{
-		"name": "Crescencio Aguirre",
+		"name": "Familia Aguirre Gutierrez",
+		"route": "familia-aguirre-gutierrez",
 		"passes": 5,
-		"route": "crescencio-aguirre"
+		"isFamily": true
 	},
 	{
 		"name": "Juan Carlos Aguirre",
+		"route": "juan-carlos-aguirre",
 		"passes": 1,
-		"route": "juan-carlos-aguirre"
+		"isFamily": false
 	},
 	{
-		"name": "Fernando Lugo",
+		"name": "Familia Lugo Tuñón",
+		"route": "familia-lugo-tunón",
 		"passes": 6,
-		"route": "fernando-lugo"
+		"isFamily": true
 	},
 	{
-		"name": "Agustin Avila",
+		"name": "Familia Avila Alcaraz",
 		"passes": 2,
-		"route": "agustin-avila"
+		"isFamily": true,
+		"route": "familia-avila-alcaraz"
 	},
 	{
-		"name": "Pedro Avila",
+		"name": "Pedro Avila y fam",
 		"passes": 3,
-		"route": "pedro-avila"
+		"isFamily": false,
+		"route": "pedro-avila-y-fam"
 	},
 	{
-		"name": "Patricia Avila",
+		"name": "Familia Díaz Avila",
 		"passes": 3,
-		"route": "patricia-avila"
+		"isFamily": true,
+		"route": "familia-diaz-avila"
 	},
 	{
-		"name": "Montserrat Espinosa",
+		"name": "Familia Cruz Espinosa",
 		"passes": 2,
-		"route": "montserrat-espinosa"
+		"isFamily": true,
+		"route": "familia-cruz-espinosa"
 	},
 	{
-		"name": "Rodolfo Rosano",
+		"name": "Rodolfo Rosano y fam",
 		"passes": 4,
-		"route": "rodolfo-rosano"
+		"isFamily": false,
+		"route": "rodolfo-rosano-y-fam"
 	},
 	{
-		"name": "Odette Rosano",
+		"name": "Familia Jiménez Rosano",
 		"passes": 4,
-		"route": "odette-rosano"
+		"isFamily": true,
+		"route": "familia-jimenez-rosano"
 	},
 	{
-		"name": "Lizeth Alfaro",
-		"passes": 2,
-		"route": "lizeth-alfaro"
+		"name": "Familia Alfaro Avila",
+		"passes": 4,
+		"isFamily": true,
+		"route": "familia-alfaro-avila"
 	},
 	{
-		"name": "Tamara Perez",
+		"name": "Familia Enriquez Pérez",
 		"passes": 2,
-		"route": "tamara-perez"
+		"isFamily": true,
+		"route": "familia-enriquez-perez"
 	},
 	{
 		"name": "Natalia Velasco",
 		"passes": 2,
+		"isFamily": false,
 		"route": "natalia-velasco"
 	},
 	{
 		"name": "Luisa Servin",
-		"passes": 2,
+		"passes": 3,
+		"isFamily": false,
 		"route": "luisa-servin"
 	},
 	{
 		"name": "Jose Beristain",
-		"passes": 1,
+		"passes": 2,
+		"isFamily": false,
 		"route": "jose-beristain"
 	},
 	{
 		"name": "Diana Montiel",
 		"passes": 2,
+		"isFamily": false,
 		"route": "diana-montiel"
 	},
 	{
 		"name": "Gabriel Rivera",
-		"passes": 1,
+		"passes": 2,
+		"isFamily": false,
 		"route": "gabriel-rivera"
 	},
 	{
 		"name": "Luis Antonio Sandoval",
-		"passes": 4,
+		"passes": 2,
+		"isFamily": false,
 		"route": "luis-antonio-sandoval"
 	},
 	{
 		"name": "Karla Gazga",
-		"passes": 2,
+		"passes": 1,
+		"isFamily": false,
 		"route": "karla-gazga"
 	},
 	{
 		"name": "Antonio Flores",
 		"passes": 2,
+		"isFamily": false,
 		"route": "antonio-flores"
 	},
 	{
 		"name": "Marisol Rosas",
-		"passes": 2,
+		"passes": 1,
+		"isFamily": false,
 		"route": "marisol-rosas"
 	},
 	{
-		"name": "Diana Laura",
+		"name": "Diana L. Pérez",
 		"passes": 1,
-		"route": "diana-laura"
+		"isFamily": false,
+		"route": "diana-l.-perez"
 	},
 	{
 		"name": "Silvia Gonzalez",
 		"passes": 4,
+		"isFamily": false,
 		"route": "silvia-gonzalez"
 	},
 	{
 		"name": "Alberto Barajas",
 		"passes": 2,
+		"isFamily": false,
 		"route": "alberto-barajas"
 	},
 	{
 		"name": "Ariel Barajas",
 		"passes": 2,
-		"route": "ariel-barajas"
+		"route": "ariel-barajas",
+		"isFamily": false
 	},
 	{
 		"name": "Sandra Gonzalez",
-		"passes": 2,
-		"route": "sandra-gonzalez"
-	},
-	{
-		"name": "Luis Chavez",
 		"passes": 1,
-		"route": "luis-chavez"
+		"route": "sandra-gonzalez",
+		"isFamily": false
 	},
 	{
-		"name": "Conrado Barajas",
-		"passes": 2,
-		"route": "conrado-barajas"
+		"name": "Familia Chávez",
+		"passes": 3,
+		"route": "familia-chavez",
+		"isFamily": true
 	},
 	{
-		"name": "Israel Barajas",
+		"name": "Conrado Barajas y esposa",
 		"passes": 2,
-		"route": "israel-barajas"
+		"route": "conrado-barajas-y-esposa",
+		"isFamily": false
+	},
+	{
+		"name": "Israel Barajas y familia",
+		"passes": 5,
+		"route": "israel-barajas-y-familia",
+		"isFamily": true
 	},
 	{
 		"name": "Miriam Barajas",
-		"passes": 2,
-		"route": "miriam-barajas"
+		"passes": 1,
+		"route": "miriam-barajas",
+		"isFamily": false
 	},
 	{
-		"name": "Antonio Gonzalez",
-		"passes": 2,
-		"route": "antonio-gonzalez"
+		"name": "Antonio Gonzalez y familia",
+		"passes": 4,
+		"route": "antonio-gonzalez-y-familia",
+		"isFamily": true
 	},
 	{
 		"name": "Brenda Hernandez",
-		"passes": 2,
-		"route": "brenda-hernandez"
+		"passes": 4,
+		"route": "brenda-hernandez",
+		"isFamily": false
 	},
 	{
 		"name": "Miriam Lopez",
 		"passes": 2,
-		"route": "miriam-lopez"
+		"route": "miriam-lopez",
+		"isFamily": false
 	},
 	{
 		"name": "Juan Barajas",
-		"passes": 1,
-		"route": "juan-barajas"
+		"passes": 2,
+		"route": "juan-barajas",
+		"isFamily": false
 	},
 	{
-		"name": "Miguel Gonzalez",
+		"name": "Miguel González",
 		"passes": 2,
-		"route": "miguel-gonzalez"
+		"route": "miguel-gonzalez",
+		"isFamily": false
 	},
 	{
 		"name": "Jorge Barrera",
-		"passes": 1,
-		"route": "jorge-barrera"
+		"passes": 2,
+		"route": "jorge-barrera",
+		"isFamily": false
 	},
 	{
 		"name": "Eduardo Arce",
 		"passes": 2,
-		"route": "eduardo-arce"
+		"route": "eduardo-arce",
+		"isFamily": false
 	},
 	{
 		"name": "Monserrat Mota",
 		"passes": 2,
-		"route": "monserrat-mota"
+		"route": "monserrat-mota",
+		"isFamily": false
 	},
 	{
 		"name": "Montserrat Bello",
-		"passes": 1,
-		"route": "montserrat-bello"
+		"passes": 2,
+		"route": "montserrat-bello",
+		"isFamily": false
 	},
 	{
 		"name": "Myrna Bravo",
-		"passes": 1,
-		"route": "myrna-bravo"
+		"passes": 2,
+		"route": "myrna-bravo",
+		"isFamily": false
 	},
 	{
 		"name": "Dariana Martinez",
-		"passes": 2,
-		"route": "dariana-martinez"
+		"passes": 1,
+		"route": "dariana-martinez",
+		"isFamily": false
 	},
 	{
 		"name": "Oman Pakistan",
-		"passes": 2,
-		"route": "oman-pakistan"
+		"passes": 1,
+		"route": "oman-pakistan",
+		"isFamily": false
 	},
 	{
 		"name": "Manuel Fernandez",
 		"passes": 2,
-		"route": "manuel-fernandez"
+		"route": "manuel-fernandez",
+		"isFamily": false
 	},
 	{
 		"name": "Miriam Sanchez",
 		"passes": 2,
-		"route": "miriam-sanchez"
+		"route": "miriam-sanchez",
+		"isFamily": false
 	},
 	{
 		"name": "Areli Acosta",
-		"passes": 1,
-		"route": "areli-acosta"
+		"passes": 2,
+		"route": "areli-acosta",
+		"isFamily": false
 	},
 	{
 		"name": "Jorge Duarte",
-		"passes": 5,
-		"route": "jorge-duarte"
+		"passes": 1,
+		"route": "jorge-duarte",
+		"isFamily": false
 	},
 	{
-		"name": "Rafael Avila",
+		"name": "Familia Avila Mora",
 		"passes": 4,
-		"route": "rafael-avila"
+		"route": "familia-avila-mora",
+		"isFamily": true
 	},
 	{
 		"name": "Ivonne Avila",
 		"passes": 2,
-		"route": "ivonne-avila"
+		"route": "ivonne-avila",
+		"isFamily": false
 	},
 	{
-		"name": "Jann Guasco",
+		"name": "Jann Guasco y familia",
 		"passes": 3,
-		"route": "jann-guasco"
+		"route": "jann-guasco-y-familia",
+		"isFamily": true
 	},
 	{
 		"name": "Sagrario Avila",
 		"passes": 2,
-		"route": "sagrario-avila"
+		"route": "sagrario-avila",
+		"isFamily": false
 	},
 	{
 		"name": "Marlen Arellano",
 		"passes": 2,
-		"route": "marlen-arellano"
+		"route": "marlen-arellano",
+		"isFamily": false
 	},
 	{
 		"name": "Frida Gomez",
 		"passes": 1,
-		"route": "frida-gomez"
+		"route": "frida-gomez",
+		"isFamily": false
 	},
 	{
 		"name": "Stefany Guerrero",
 		"passes": 2,
-		"route": "stefany-guerrero"
+		"route": "stefany-guerrero",
+		"isFamily": false
 	},
 	{
-		"name": "Reina Rosano",
+		"name": "Familai Contreras Rosano",
 		"passes": 3,
-		"route": "reina-rosano"
+		"route": "familai-contreras-rosano",
+		"isFamily": false
 	},
 	{
 		"name": "Karely Huerta",
 		"passes": 1,
-		"route": "karely-huerta"
+		"route": "karely-huerta",
+		"isFamily": false
 	},
 	{
 		"name": "Joab Sanchez",
 		"passes": 2,
-		"route": "joab-sanchez"
+		"route": "joab-sanchez",
+		"isFamily": false
 	},
 	{
-		"name": "Leonel Rojas",
+		"name": "Leonel Rojas y familia",
 		"passes": 3,
-		"route": "leonel-rojas"
+		"route": "leonel-rojas-y-familia",
+		"isFamily": true
 	},
 	{
 		"name": "Gerardo Romano",
 		"passes": 2,
-		"route": "gerardo-romano"
+		"route": "gerardo-romano",
+		"isFamily": false
 	},
 	{
-		"name": "Jorge Gomez",
+		"name": "Jorge Gomez y familia",
 		"passes": 3,
-		"route": "jorge-gomez"
+		"route": "jorge-gomez-y-familia",
+		"isFamily": true
 	},
 	{
 		"name": "Marius Darde",
 		"passes": 2,
-		"route": "marius-darde"
+		"route": "marius-darde",
+		"isFamily": false
 	},
 	{
 		"name": "Marianela Cano",
 		"passes": 2,
-		"route": "marianela-cano"
+		"route": "marianela-cano",
+		"isFamily": false
 	},
 	{
 		"name": "Mariza Oviedo",
 		"passes": 1,
-		"route": "mariza-oviedo"
+		"route": "mariza-oviedo",
+		"isFamily": false
 	},
 	{
 		"name": "Alejandro Palomares",
 		"passes": 1,
-		"route": "alejandro-palomares"
+		"route": "alejandro-palomares",
+		"isFamily": false
 	},
 	{
-		"name": "Gabriel Maga\u00f1a",
+		"name": "Gabriel Magaña y esposa",
 		"passes": 2,
-		"route": "gabriel-magana"
+		"route": "gabriel-magaña-y-esposa",
+		"isFamily": false
 	},
 	{
 		"name": "Sandra Chavez",
 		"passes": 2,
-		"route": "sandra-chavez"
+		"route": "sandra-chavez",
+		"family": false
 	},
 	{
 		"name": "Likil Trujillo",
 		"passes": 2,
-		"route": "likil-trujillo"
+		"route": "likil-trujillo",
+		"family": false
 	},
 	{
-		"name": "Kin Trujillo",
+		"name": "Kin Trujillo y familia",
 		"passes": 3,
-		"route": "kin-trujillo"
+		"route": "kin-trujillo-y-familia",
+		"family": true
 	},
 	{
-		"name": "Celerino Montalvan",
+		"name": "Familia Montalvan Romero",
 		"passes": 4,
-		"route": "celerino-montalvan"
+		"route": "familia-montalvan-romero",
+		"family": true
 	},
 	{
 		"name": "Miriam Avalos",
 		"passes": 2,
-		"route": "miriam-avalos"
+		"route": "miriam-avalos",
+		"family": false
 	},
 	{
 		"name": "Florian Keim",
 		"passes": 2,
-		"route": "florian-keim"
+		"route": "florian-keim",
+		"family": false
 	},
 	{
-		"name": "Sergio Suarez",
+		"name": "Estela Suarez",
 		"passes": 2,
-		"route": "sergio-suarez"
+		"route": "estela-suarez",
+		"family": false
 	},
 	{
 		"name": "Alejandra Santoyo",
 		"passes": 2,
-		"route": "alejandra-santoyo"
+		"route": "alejandra-santoyo",
+		"family": false
 	},
 	{
-		"name": "Juliio Torres",
+		"name": "Julio Torres",
 		"passes": 2,
-		"route": "juliio-torres"
+		"route": "julio-torres",
+		"family": false
 	},
 	{
 		"name": "Brianda Capuzano",
 		"passes": 2,
-		"route": "brianda-capuzano"
+		"route": "brianda-capuzano",
+		"family": false
 	},
 	{
 		"name": "Carlos Montes",
 		"passes": 2,
-		"route": "carlos-montes"
+		"route": "carlos-montes",
+		"family": false
 	},
 	{
-		"name": "Margarita Avila",
-		"passes": 5,
-		"route": "margarita-avila"
-	},
-	{
-		"name": "Ayerim Valdez",
+		"name": "Antonio Borja y esposa",
 		"passes": 2,
-		"route": "ayerim-valdez"
+		"route": "antonio-borja-y-esposa",
+		"family": true
+	},
+	{
+		"name": "Familia Borja Guadarrama",
+		"passes": 3,
+		"route": "familia-borja-guadarrama",
+		"family": true
+	},
+	{
+		"name": "Ayerim Valdés",
+		"passes": 2,
+		"route": "ayerim-valdes",
+		"family": false
 	},
 	{
 		"name": "Xavier Medina",
 		"passes": 2,
-		"route": "xavier-medina"
+		"route": "xavier-medina",
+		"family": false
 	},
 	{
 		"name": "Guillermo Medina",
 		"passes": 2,
-		"route": "guillermo-medina"
+		"route": "guillermo-medina",
+		"family": false
 	},
 	{
 		"name": "Alberto Medina",
 		"passes": 1,
-		"route": "alberto-medina"
+		"route": "alberto-medina",
+		"family": false
 	},
 	{
-		"name": "Teresa Medina",
+		"name": "Teresa Medina y familia",
 		"passes": 5,
-		"route": "teresa-medina"
+		"route": "teresa-medina-y-familia",
+		"family": true
 	},
 	{
-		"name": "Carlos Tadeo",
+		"name": "Carlos Tadeo y esposa",
 		"passes": 2,
-		"route": "carlos-tadeo"
+		"route": "carlos-tadeo-y-esposa",
+		"family": true
 	},
 	{
-		"name": "Angel Avila",
+		"name": "Angel Avila y esposa",
 		"passes": 2,
-		"route": "angel-avila"
+		"route": "angel-avila-y-esposa",
+		"family": true
 	},
 	{
-		"name": "Jesus Avila",
+		"name": "Familia Avila García",
 		"passes": 5,
-		"route": "jesus-avila"
+		"route": "familia-avila-garcia",
+		"family": true
 	},
 	{
 		"name": "Yuriko Cruz",
 		"passes": 2,
-		"route": "yuriko-cruz"
+		"route": "yuriko-cruz",
+		"family": false
 	},
 	{
-		"name": "Alba Gonzalez",
+		"name": "Alba González",
 		"passes": 1,
-		"route": "alba-gonzalez"
+		"route": "alba-gonzalez",
+		"family": false
 	},
 	{
-		"name": "Barbara Alva",
-		"passes": 1,
-		"route": "barbara-alva"
+		"name": "Bárbara González",
+		"passes": 2,
+		"route": "barbara-gonzalez",
+		"family": false
 	},
 	{
 		"name": "Saraid Trejo",
 		"passes": 1,
-		"route": "saraid-trejo"
+		"route": "saraid-trejo",
+		"family": false
+	},
+	{
+		"name": "Liliana Zeferino",
+		"passes": 1,
+		"route": "liliana-zeferino",
+		"family": false
+	},
+	{
+		"name": "Alejandra Pérez",
+		"passes": 1,
+		"route": "alejandra-perez",
+		"family": false
+	},
+	{
+		"name": "Comodin Carlo 1",
+		"passes": 2,
+		"route": "comodin-carlo-1",
+		"family": false
 	}
 ]

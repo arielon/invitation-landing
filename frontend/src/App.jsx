@@ -43,6 +43,7 @@ function App() {
 	useEffect(() => {
 		const route = location.pathname.slice(1);
 		const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 		fetch(`${backendUrl}/${route}`)
 			.then((response) => {
 				if (!response.ok) {
@@ -53,7 +54,7 @@ function App() {
 			.then((data) => setGuestData(data))
 			.catch((error) => {
 				console.error(error);
-				setGuestData(null);
+				setError(true);
 			});
 	}, [location.pathname]);
 
