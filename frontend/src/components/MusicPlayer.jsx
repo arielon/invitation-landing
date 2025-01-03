@@ -4,20 +4,6 @@ const MusicPlayer = () => {
 	const [playing, setPlaying] = useState(false); // Estado de reproducción
 	const [scrolled, setScrolled] = useState(false); // Estado del scroll inicial
 
-	useEffect(() => {
-		const handleScroll = () => {
-			if (!scrolled) {
-				setScrolled(true);
-				setPlaying(true); // Activar reproducción en el primer scroll
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, [scrolled]);
-
 	const togglePlay = () => {
 		const audio = document.getElementById("background-music");
 		if (playing) {
