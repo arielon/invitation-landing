@@ -11,7 +11,7 @@ const SponsorsSection = () => (
 			<AnimatedComponent animation={fadeInFromLeft} delay={0.2}>
 				<div className="sponsor-card style-horizontal">
 					<div className="sponsor-image" style={{ backgroundImage: "url('/images/sponsor4.png')" }}></div>
-					<h3>Fernando y Aurora</h3>
+					<h3>Aurora y Fernando</h3>
 					<p>Padrinos de Velación</p>
 				</div>
 			</AnimatedComponent>
@@ -24,7 +24,7 @@ const SponsorsSection = () => (
 			</AnimatedComponent>
 			<div className="sponsor-card style-horizontal">
 				<div className="sponsor-image" style={{ backgroundImage: "url('/images/sponsor6.png')" }}></div>
-				<h3>Roger y Montse</h3>
+				<h3>Montse y Roger</h3>
 				<p>Padrinos de Anillos</p>
 			</div>
 			<AnimatedComponent animation={fadeInFromLeft} delay={0.2}>

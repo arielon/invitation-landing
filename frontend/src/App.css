@@ -1180,6 +1180,48 @@ input {
 	height: 2rem;
 }
 
+@media screen and (min-width: 1018px) and (max-width: 1400px) {
+	.about-us-image {
+		border-radius: 16.0625rem;
+		border: 2px solid var(--Gold-Start, #957237);
+		padding: 1.25rem;
+		width: 50%;
+		height: 26rem;
+	}
+
+	.sponsors-content {
+		gap: 1.75rem;
+		width: 100%;
+	}
+
+	.style-vertical .sponsor-image {
+		width: 15rem;
+		height: 20rem;
+	}
+
+	.style-horizontal .sponsor-image {
+		width: 20rem;
+		height: 15rem;
+	}
+
+	.parents-content {
+		gap: 1.5rem;
+	}
+
+	.parent-image {
+		border-radius: 4rem;
+		border: 6px solid var(--Gold-Start, #957237);
+		width: 17.5rem;
+		height: 20rem;
+		object-fit: cover;
+		object-position: top;
+	}
+
+	h3 {
+		font-size: 1.75rem;
+	}
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 	.hero-content {
