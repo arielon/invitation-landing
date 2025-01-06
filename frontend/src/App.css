@@ -1185,7 +1185,7 @@ input {
 		border-radius: 16.0625rem;
 		border: 2px solid var(--Gold-Start, #957237);
 		padding: 1.25rem;
-		width: 50%;
+		width: 100%;
 		height: 26rem;
 	}
 
@@ -1209,12 +1209,10 @@ input {
 	}
 
 	.parent-image {
-		border-radius: 4rem;
-		border: 6px solid var(--Gold-Start, #957237);
-		width: 17.5rem;
-		height: 20rem;
-		object-fit: cover;
-		object-position: top;
+		border-radius: 3rem;
+		border: 4px solid var(--Gold-Start, #957237);
+		width: 14rem;
+		height: 18rem;
 	}
 
 	h3 {
