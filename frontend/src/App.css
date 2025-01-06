@@ -1182,7 +1182,7 @@ input {
 
 @media screen and (min-width: 1018px) and (max-width: 1400px) {
 	.about-us-image {
-		border-radius: 16.0625rem;
+		border-radius: 11rem;
 		border: 2px solid var(--Gold-Start, #957237);
 		padding: 1.25rem;
 		width: 100%;
