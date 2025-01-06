@@ -1190,29 +1190,33 @@ input {
 	}
 
 	.sponsors-content {
-		gap: 1.75rem;
+		gap: 1.5rem;
 		width: 100%;
 	}
 
 	.style-vertical .sponsor-image {
-		width: 15rem;
-		height: 20rem;
+		width: 13rem;
+		height: 17rem;
 	}
 
 	.style-horizontal .sponsor-image {
-		width: 20rem;
-		height: 15rem;
+		width: 17rem;
+		height: 13rem;
 	}
 
 	.parents-content {
 		gap: 1.5rem;
 	}
 
+	.parent-card {
+		gap: 3rem;
+	}
+
 	.parent-image {
 		border-radius: 3rem;
 		border: 4px solid var(--Gold-Start, #957237);
-		width: 14rem;
-		height: 18rem;
+		width: 12.5rem;
+		height: 16rem;
 	}
 
 	h3 {
