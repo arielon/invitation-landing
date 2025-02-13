@@ -7,7 +7,7 @@ const InvitationSection = ({ guestData }) => {
 	const isFamily = guestData.isFamily;
 
 	// Verificar si el nombre contiene "Comodin Carlo"
-	const isSpecialGuest = guestData.name.includes("Comodin Carlo 1");
+	const isSpecialGuest = guestData.name.includes("Invitacion");
 
 	// Textos dinámicos
 	const invitationText = isSpecialGuest

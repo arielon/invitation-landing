@@ -646,5 +646,11 @@
 		"passes": 2,
 		"route": "comodin-carlo-1",
 		"family": false
+	},
+	{
+		"name": "Invitacion",
+		"passes": 2,
+		"route": "invitacion",
+		"family": false
 	}
 ]
